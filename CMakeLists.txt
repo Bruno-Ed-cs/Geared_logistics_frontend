@@ -24,6 +24,16 @@ qt_add_qml_module(appGeared_logistics_frontend
         Main.qml
 )
 
+target_link_libraries(appGeared_logistics_frontend PRIVATE
+    Qt6::Quick
+    figma_imports
+    DesignTokens)
+
+#install(TARGETS appGeared_logistics_frontend
+#    BUNDLE  DESTINATION .
+#    RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
+#)
+
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
 # If you are developing for iOS or macOS you should consider setting an
 # explicit, fixed bundle identifier manually though.
@@ -35,12 +45,3 @@ set_target_properties(appGeared_logistics_frontend PROPERTIES
     WIN32_EXECUTABLE TRUE
 )
 
-target_link_libraries(appGeared_logistics_frontend
-    PRIVATE Qt6::Quick
-)
-
-install(TARGETS appGeared_logistics_frontend
-    BUNDLE DESTINATION .
-    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
-    RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
-)

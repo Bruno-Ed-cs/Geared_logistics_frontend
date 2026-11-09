@@ -1,0 +1,5 @@
+module DesignTokens
+
+Cole_o_de_vari_veisTheme 1.0 Cole_o_de_vari_veisTheme.qml
+Cole_o_de_vari_veisColors 1.0 Cole_o_de_vari_veisColors.qml
+singleton Cole_o_de_vari_veis 1.0 Cole_o_de_vari_veis.qml
